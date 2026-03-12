@@ -1,0 +1,4 @@
+float64 celsius
+---
+float64 fahrenheit
+bool valid

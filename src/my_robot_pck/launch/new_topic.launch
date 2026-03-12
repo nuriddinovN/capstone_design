@@ -1,0 +1,64 @@
+<launch>
+
+    <!--
+    ═══════════════════════════════════════════════════════
+    REMAP DEMONSTRATION
+    
+    Original topic names (hardcoded in Python scripts):
+      publisher_a.py  → /topic_a
+      publisher_b.py  → /topic_b
+      subscriber_a.py → /topic_a
+      subscriber_b.py → /topic_b
+
+    After remap:
+      /topic_a  becomes  /robot_sensor_data
+      /topic_b  becomes  /robot_command_data
+
+    Python scripts are NOT modified at all.
+    ═══════════════════════════════════════════════════════
+    -->
+
+    <!-- Publisher A: originally publishes /topic_a -->
+    <!-- After remap: publishes /robot_sensor_data   -->
+    <node pkg="my_robot_pck"
+          type="publisher_a.py"
+          name="publisher_a"
+          output="screen">
+        <remap from="/topic_a" to="/robot_sensor_data"/>
+    </node>
+
+    <!-- Publisher B: originally publishes /topic_b  -->
+    <!-- After remap: publishes /robot_command_data  -->
+    <node pkg="my_robot_pck"
+          type="publisher_b.py"
+          name="publisher_b"
+          output="screen">
+        <remap from="/topic_b" to="/robot_command_data"/>
+    </node>
+
+    <!-- Subscriber A: originally listens on /topic_a      -->
+    <!-- After remap: listens on /robot_sensor_data        -->
+    <!-- Connects to publisher_a automatically             -->
+    <node pkg="my_robot_pck"
+          type="subscriber_a.py"
+          name="subscriber_a"
+          output="screen">
+        <remap from="/topic_a" to="/robot_sensor_data"/>
+    </node>
+
+    <!-- Subscriber B: originally listens on /topic_b      -->
+    <!-- After remap: listens on /robot_command_data       -->
+    <!-- Connects to publisher_b automatically             -->
+    <node pkg="my_robot_pck"
+          type="subscriber_b.py"
+          name="subscriber_b"
+          output="screen">
+        <remap from="/topic_b" to="/robot_command_data"/>
+    </node>
+
+    <!-- Visualization -->
+    <node pkg="rqt_graph"
+          type="rqt_graph"
+          name="rqt_graph"/>
+
+</launch>

@@ -1,0 +1,44 @@
+<launch>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--           PUBLISHER NODES                   -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <!-- Publisher A: publishes to /topic_a at 1 Hz -->
+    <node pkg="my_robot_pck"
+          type="publisher_a.py"
+          name="publisher_a"
+          output="screen"/>
+
+    <!-- Publisher B: publishes to /topic_b at 2 Hz -->
+    <node pkg="my_robot_pck"
+          type="publisher_b.py"
+          name="publisher_b"
+          output="screen"/>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--           SUBSCRIBER NODES                  -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <!-- Subscriber A: listens on /topic_a -->
+    <node pkg="my_robot_pck"
+          type="subscriber_a.py"
+          name="subscriber_a"
+          output="screen"/>
+
+    <!-- Subscriber B: listens on /topic_b -->
+    <node pkg="my_robot_pck"
+          type="subscriber_b.py"
+          name="subscriber_b"
+          output="screen"/>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!--           VISUALIZATION                     -->
+    <!-- ═══════════════════════════════════════════ -->
+
+    <!-- rqt_graph: shows the node/topic diagram -->
+    <node pkg="rqt_graph"
+          type="rqt_graph"
+          name="rqt_graph"/>
+
+</launch>
