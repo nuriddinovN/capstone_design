@@ -1,2 +1,2 @@
-my_robot_pck
+my_robot_pkg
 -DCATKIN_DEVEL_PREFIX=/home/noor/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/noor/catkin_ws/install -G Unix Makefiles

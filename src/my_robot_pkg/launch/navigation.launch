@@ -1,0 +1,28 @@
+<launch>
+
+  <!-- Path to saved map -->
+  <arg name="map_file" default="$(find my_robot_pck)/maps/my_map1.yaml"/>
+
+  <!-- Robot description -->
+  <param name="robot_description"
+    command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(env TURTLEBOT3_MODEL).urdf.xacro"/>
+
+  <!-- Robot state publisher -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" value="50.0"/>
+  </node>
+
+  <!-- Load saved map -->
+  <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
+
+  <!-- AMCL localization -->
+  <include file="$(find turtlebot3_navigation)/launch/amcl.launch"/>
+
+  <!-- move_base (costmaps + planner) -->
+  <include file="$(find turtlebot3_navigation)/launch/move_base.launch"/>
+
+  <!-- RViz for navigation -->
+  <node pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_nav.rviz"/>
+
+</launch>

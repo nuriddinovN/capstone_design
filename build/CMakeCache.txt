@@ -483,10 +483,10 @@ message_generation_DIR:PATH=/opt/ros/noetic/share/message_generation/cmake
 message_runtime_DIR:PATH=/opt/ros/noetic/share/message_runtime/cmake
 
 //Value Computed by CMake
-my_robot_pck_BINARY_DIR:STATIC=/home/noor/catkin_ws/build/my_robot_pck
+my_robot_pck_BINARY_DIR:STATIC=/home/noor/catkin_ws/build/my_robot_pkg
 
 //Value Computed by CMake
-my_robot_pck_SOURCE_DIR:STATIC=/home/noor/catkin_ws/src/my_robot_pck
+my_robot_pck_SOURCE_DIR:STATIC=/home/noor/catkin_ws/src/my_robot_pkg
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/noetic/share/rosconsole/cmake

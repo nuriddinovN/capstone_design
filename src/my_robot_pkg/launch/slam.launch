@@ -1,0 +1,30 @@
+<launch>
+
+  <!-- GMapping SLAM node -->
+  <node pkg="gmapping" type="slam_gmapping" name="turtlebot3_slam_gmapping" output="screen">
+    <param name="base_frame"           value="base_footprint"/>
+    <param name="odom_frame"           value="odom"/>
+    <param name="map_frame"            value="map"/>
+    <param name="map_update_interval"  value="2.0"/>
+    <param name="maxUrange"            value="3.0"/>
+    <param name="minimumScore"         value="50"/>
+    <param name="linearUpdate"         value="0.5"/>
+    <param name="angularUpdate"        value="0.2"/>
+    <param name="temporalUpdate"       value="0.5"/>
+    <param name="delta"                value="0.05"/>
+    <param name="particles"            value="100"/>
+    <param name="xmin"                 value="-10.0"/>
+    <param name="ymin"                 value="-10.0"/>
+    <param name="xmax"                 value="10.0"/>
+    <param name="ymax"                 value="10.0"/>
+    <param name="srr"  value="0.1"/>
+    <param name="srt"  value="0.2"/>
+    <param name="str"  value="0.1"/>
+    <param name="stt"  value="0.2"/>
+  </node>
+
+  <!-- RViz for visualizing the map being built -->
+  <node pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find turtlebot3_slam)/rviz/turtlebot3_gmapping.rviz"/>
+
+</launch>
