@@ -38,76 +38,76 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/msg" TYPE FILE FILES "/home/noor/catkin_ws/src/my_robot_pkg/msg/RobotStatus.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES "/home/noor/catkin_ws/src/my_robot_pkg/msg/RobotStatus.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/srv" TYPE FILE FILES
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/srv" TYPE FILE FILES
     "/home/noor/catkin_ws/src/my_robot_pkg/srv/AddTwoInts.srv"
     "/home/noor/catkin_ws/src/my_robot_pkg/srv/TemperatureConverter.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/action" TYPE FILE FILES "/home/noor/catkin_ws/src/my_robot_pkg/action/Navigate.action")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/action" TYPE FILE FILES "/home/noor/catkin_ws/src/my_robot_pkg/action/Navigate.action")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/msg" TYPE FILE FILES
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateAction.msg"
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateActionGoal.msg"
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateActionResult.msg"
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateActionFeedback.msg"
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateGoal.msg"
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateResult.msg"
-    "/home/noor/catkin_ws/devel/share/my_robot_pck/msg/NavigateFeedback.msg"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/msg" TYPE FILE FILES
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateAction.msg"
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateActionGoal.msg"
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateActionResult.msg"
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateActionFeedback.msg"
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateGoal.msg"
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateResult.msg"
+    "/home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateFeedback.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/cmake" TYPE FILE FILES "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pck-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pkg-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/include/my_robot_pck")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/include/my_robot_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/share/roseus/ros/my_robot_pck")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/share/roseus/ros/my_robot_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/share/common-lisp/ros/my_robot_pck")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/share/common-lisp/ros/my_robot_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/share/gennodejs/ros/my_robot_pck")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/share/gennodejs/ros/my_robot_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/noor/catkin_ws/devel/lib/python3/dist-packages/my_robot_pck")
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/noor/catkin_ws/devel/lib/python3/dist-packages/my_robot_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/lib/python3/dist-packages/my_robot_pck")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/noor/catkin_ws/devel/lib/python3/dist-packages/my_robot_pkg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pck.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/cmake" TYPE FILE FILES "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pck-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pkg-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck/cmake" TYPE FILE FILES
-    "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pckConfig.cmake"
-    "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pckConfig-version.cmake"
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg/cmake" TYPE FILE FILES
+    "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pkgConfig.cmake"
+    "/home/noor/catkin_ws/build/my_robot_pkg/catkin_generated/installspace/my_robot_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pck" TYPE FILE FILES "/home/noor/catkin_ws/src/my_robot_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_pkg" TYPE FILE FILES "/home/noor/catkin_ws/src/my_robot_pkg/package.xml")
 endif()
 
