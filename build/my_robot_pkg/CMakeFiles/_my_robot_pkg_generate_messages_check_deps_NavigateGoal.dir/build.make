@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/noor/catkin_ws/build
 include my_robot_pkg/CMakeFiles/_my_robot_pkg_generate_messages_check_deps_NavigateGoal.dir/progress.make
 
 my_robot_pkg/CMakeFiles/_my_robot_pkg_generate_messages_check_deps_NavigateGoal:
-	cd /home/noor/catkin_ws/build/my_robot_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py my_robot_pkg /home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateGoal.msg std_msgs/Header:geometry_msgs/PoseStamped:geometry_msgs/Point:geometry_msgs/Pose:geometry_msgs/Quaternion
+	cd /home/noor/catkin_ws/build/my_robot_pkg && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py my_robot_pkg /home/noor/catkin_ws/devel/share/my_robot_pkg/msg/NavigateGoal.msg geometry_msgs/Point:geometry_msgs/PoseStamped:geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Quaternion
 
 _my_robot_pkg_generate_messages_check_deps_NavigateGoal: my_robot_pkg/CMakeFiles/_my_robot_pkg_generate_messages_check_deps_NavigateGoal
 _my_robot_pkg_generate_messages_check_deps_NavigateGoal: my_robot_pkg/CMakeFiles/_my_robot_pkg_generate_messages_check_deps_NavigateGoal.dir/build.make
