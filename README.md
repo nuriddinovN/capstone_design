@@ -227,31 +227,3 @@ rosmsg show my_robot_pkg/RobotStatus
 ```bash
 rosrun rviz rviz
 ```
-
-## Project Status
-
-- **Created**: March 12, 2026
-- **Last Updated**: April 19, 2026
-- **Status**: Active Development
-- **License**: TBD
-
-## Author
-
-**Maintainer**: Noor (nuriddinovN)  
-**Email**: noor@todo.todo
-
-## Contributing
-
-Contributions are welcome! Please follow ROS coding standards and ensure all packages build successfully with `catkin_make` before submitting pull requests.
-
-## License
-
-This project's license is pending finalization. For now, assume it follows ROS conventions.
-
-## Support & Issues
-
-For issues, questions, or feature requests, please open an issue on the [GitHub repository](https://github.com/nuriddinovN/capstone_design/issues).
-
----
-
-**Note**: This project is part of capstone design coursework. Some packages and features may be under active development. Refer to individual package documentation for more details.
