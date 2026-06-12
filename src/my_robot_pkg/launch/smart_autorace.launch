@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find turtlebot3_autorace_driving)/launch/turtlebot3_autorace_control_lane.launch">
+    <remap from="/cmd_vel" to="/cmd_vel_lane" />
+  </include>
+
+  <node pkg="my_robot_pkg" type="obstacle_avoider.py" name="obstacle_avoider" output="screen" />
+</launch>

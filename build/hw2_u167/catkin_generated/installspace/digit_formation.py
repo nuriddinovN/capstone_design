@@ -18,44 +18,43 @@ from tf.transformations import euler_from_quaternion
 #   Digit 7  (center x =  6.0)  — 5 robots
 # ─────────────────────────────────────────────────────────────────────────────
 TARGETS = [
-    # ── Digit 1 ──────────────────────────────
-    (-6.2,  3.6),   # R0   hook
-    (-6.0,  4.0),   # R1   top of spine
-    (-6.0,  2.7),   # R2   upper spine
-    (-6.0,  1.4),   # R3   mid spine
-    (-6.0,  0.2),   # R4   lower spine
-    (-6.5,  0.0),   # R5   base serif
+    # ── Digit 1: vertical stick, 6 robots evenly spaced ──
+    (-6.0,  0.0),   # R0
+    (-6.0,  0.8),   # R1
+    (-6.0,  1.6),   # R2
+    (-6.0,  2.4),   # R3
+    (-6.0,  3.2),   # R4
+    (-6.0,  4.0),   # R5
 
-    # ── Digit 6 ──────────────────────────────
-    ( 1.0,  1.0),   # R6   circle right
-    ( 0.5,  1.87),  # R7   circle upper-right
-    (-0.5,  1.87),  # R8   circle upper-left
-    (-1.0,  1.0),   # R9   circle left
-    (-0.5,  0.13),  # R10  circle lower-left
-    ( 0.5,  0.13),  # R11  circle lower-right
-    (-0.8,  2.5),   # R12  tail lower
-    (-0.4,  3.8),   # R13  tail upper
+    # ── Digit 6: 8 robots evenly on circle + 2 tail ──
+    # circle center (0.0, 1.2), radius 1.0, every 45°
+    ( 1.0,   1.2),  # R6   0°
+    ( 0.71,  1.91), # R7   45°
+    ( 0.0,   2.2),  # R8   90°
+    (-0.71,  1.91), # R9   135°
+    (-1.0,   1.2),  # R10  180°
+    (-0.71,  0.49), # R11  225°
+    ( 0.0,   0.2),  # R12  270°
+    ( 0.71,  0.49), # R13  315°
+    (-0.85,  2.8),  # R14  tail lower
+    (-0.5,   3.8),  # R15  tail upper
 
-    # ── Digit 7 ──────────────────────────────
-    ( 5.4,  4.0),   # R14  bar left
-    ( 6.0,  4.0),   # R15  bar center
-    ( 6.6,  4.0),   # R16  bar right
-    ( 6.2,  2.7),   # R17  diagonal upper
-    ( 5.8,  1.2),   # R18  diagonal lower
+    # ── Digit 7: 3 bar + 3 diagonal ──
+    ( 5.4,   4.0),  # R16  bar left
+    ( 6.0,   4.0),  # R17  bar center
+    ( 6.6,   4.0),  # R18  bar right
+    ( 6.3,   2.8),  # R19  diagonal upper
+    ( 6.0,   1.6),  # R20  diagonal mid
+    ( 5.7,   0.4),  # R21  diagonal lower
 ]
 
-NUM_ROBOTS = len(TARGETS)   # 19
+NUM_ROBOTS = 22
 
-# Collision avoidance: group start delays
-# Digit-1 robots (R0-R5)   start at t=0
-# Digit-7 robots (R14-R18) start at t=5s  (far side, clear path)
-# Digit-6 robots (R6-R13)  start at t=10s (middle, wait for others to clear)
 GROUP_DELAYS = (
-    [0.0]  * 6 +   # Digit 1
-    [10.0] * 8 +   # Digit 6
-    [5.0]  * 5     # Digit 7
+    [0.0]  * 6  +   # Digit 1
+    [10.0] * 10 +   # Digit 6
+    [5.0]  * 6      # Digit 7
 )
-
 
 class RobotController:
     def __init__(self, idx, target):

@@ -146,9 +146,14 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/noor/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/noor/catkin_ws/build/turtlebot3_autorace_2020/turtlebot3_autorace_2020/cmake_install.cmake")
+  include("/home/noor/catkin_ws/build/turtlebot3_autorace_2020/turtlebot3_autorace_core/cmake_install.cmake")
+  include("/home/noor/catkin_ws/build/turtlebot3_autorace_2020/turtlebot3_autorace_msgs/cmake_install.cmake")
+  include("/home/noor/catkin_ws/build/turtlebot3_autorace_2020/turtlebot3_autorace_driving/cmake_install.cmake")
   include("/home/noor/catkin_ws/build/my_robot_pkg/cmake_install.cmake")
-  include("/home/noor/catkin_ws/build/hw2_U2010167/cmake_install.cmake")
   include("/home/noor/catkin_ws/build/hw2_u167/cmake_install.cmake")
+  include("/home/noor/catkin_ws/build/turtlebot3_autorace_2020/turtlebot3_autorace_camera/cmake_install.cmake")
+  include("/home/noor/catkin_ws/build/turtlebot3_autorace_2020/turtlebot3_autorace_detect/cmake_install.cmake")
 
 endif()
 
